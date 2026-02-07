@@ -1,0 +1,39 @@
+PHASE TEMPLATE — v0
+
+Purpose
+This template defines the structure of a Release Phase for Scope Cutter v0.
+A phase is a claim of legitimacy, not a plan.
+
+Core Claim
+“If we shipped only this phase and stopped permanently,
+the result would still make sense on its own.”
+
+Required Fields (enforced in v0)
+
+EXISTS TO
+<one sentence stating the single purpose of this phase>
+
+SHIPS AS
+<one concrete artifact or behavior>
+
+Optional Fields (allowed but NOT enforced in v0)
+
+EXPLICITLY DOES NOT DO
+<hard exclusions; what this phase refuses to cover>
+
+COMPLETE WHEN
+<objective stop condition>
+
+v0 Enforcement Rules
+- Only EXISTS TO and SHIPS AS are validated in v0.
+- All other fields are ignored by Scope Cutter v0.
+- If either required field is missing or ambiguous, the phase is BLOCKED.
+
+Notes
+- Phases are units of legitimacy, not sequencing.
+- Phases do not imply future phases exist.
+- Future lint lenses (salience, trust boundary, reversibility)
+  are defined elsewhere and are inactive in v0.
+
+End
+This template defines the phase object for Scope Cutter v0.
