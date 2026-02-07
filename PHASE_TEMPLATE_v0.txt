@@ -8,6 +8,17 @@ Core Claim
 “If we shipped only this phase and stopped permanently,
 the result would still make sense on its own.”
 
+Important Rule — Dependencies
+
+Scope Cutter does not assume shared context.
+
+If this phase depends on any external system, service, workflow,
+or prior work to make sense, that dependency must be explicitly
+named in SHIPS AS.
+
+Implicit dependencies cause the phase to be BLOCKED.
+
+
 Required Fields (enforced in v0)
 
 EXISTS TO
