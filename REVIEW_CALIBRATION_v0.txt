@@ -27,10 +27,12 @@ SHIPS AS
 A template file and documentation describing how phases should be written.
 
 Verdicts
-- CTO: ______
-- Sr Eng: ____
-- Security: ____
+- CTO: BLOCK
+- Sr Eng: BLOCK
+- Security: BLOCK
 Resolution Notes:
+Groundwork/template-only output. Not a standalone artifact that delivers value on its own.
+
 _____________________________________________
 
 CASE 2 — “Manual process with output”
@@ -41,10 +43,12 @@ SHIPS AS
 A manual checklist procedure that produces a signed review record.
 
 Verdicts
-- CTO: ______
-- Sr Eng: ____
-- Security: ____
+- CTO: PASS
+- Sr Eng: PASS
+- Security: PASS
 Resolution Notes:
+Manual procedure produces a durable signed review record; stands alone without future phases.
+
 _____________________________________________
 
 CASE 3 — “Single artifact but bundled intent”
@@ -55,10 +59,12 @@ SHIPS AS
 A CLI tool that returns PASS/BLOCK and suggests how to rewrite the phase.
 
 Verdicts
-- CTO: ______
-- Sr Eng: ____
-- Security: ____
+- CTO: BLOCK
+- Sr Eng: BLOCK
+- Security: BLOCK
 Resolution Notes:
+Bundles judgment + advisory rewrite suggestions. Not “exactly one thing” for v0.
+
 _____________________________________________
 
 CASE 4 — “One output, depends on environment”
@@ -69,10 +75,12 @@ SHIPS AS
 A dashboard screen that renders metrics from a backend service.
 
 Verdicts
-- CTO: ______
-- Sr Eng: ____
-- Security: ____
+- CTO: BLOCK
+- Sr Eng: BLOCK
+- Security: BLOCK
 Resolution Notes:
+Requires backend/service context not shipped as part of the phase. Existence cannot rely on implicit dependencies.
+
 _____________________________________________
 
 CASE 5 — “One thing, but ambiguous plurality”
