@@ -1,0 +1,29 @@
+REVIEW PACKET
+
+1) Issue
+- File: issues/ISSUE-XXX.md
+
+2) Plan
+- File: plans/ISSUE-XXX_PLAN.md
+
+3) Constraints (attach the current ones)
+- IP / data policy: IP.txt
+- Product OR Rule/Invariant definition: PRODUCT.md or INVARIANT.md (or RULES.md)
+- Scope definition: MVP_SCOPE.md (or current SCOPE.md)
+- Any additional constraints for this change: <list>
+
+4) Gates output
+- Command(s) run:
+- Output:
+
+5) Diff (diff only)
+- Paste: git diff <base>..<head>
+
+REQUEST
+Run the following reviewers independently:
+- CTO
+- Senior Engineer
+- Security
+
+Each must follow their ROLE contract and cite issues anchored to the diff.
+

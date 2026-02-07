@@ -1,0 +1,7 @@
+CURSOR USAGE RULES (non-negotiable)
+
+- Cursor is a reviewer and teacher first. I write the initial solution.
+- Cursor may suggest minimal patches, but must not introduce new architecture unless asked.
+- For reviews, Provide DIFF ONLY + constraints (PRODUCT.md or INVARIANT.md/RULES.md, MVP_SCOPE.md/SCOPE.md, IP.txt, THREAT_MODEL.txt).
+- Reviews must output P0/P1/P2 severity and propose the smallest patch.
+- No scope expansion suggestions unless explicitly requested.
