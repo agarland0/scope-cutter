@@ -18,6 +18,9 @@ Clarifications (v0)
 - “Standalone” means: if the project stopped permanently after this phase,
   the shipped thing would still make sense and be usable as-is.
 - Existence does not require the artifact to be optimal, complete, or scalable.
+- Existence may not rely on implicit context; any external dependency required
+  for the phase to make sense must be explicitly named in SHIPS AS.
+
 
 PASS / BLOCK Examples (v0)
 
