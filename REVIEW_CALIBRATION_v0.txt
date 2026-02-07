@@ -1,0 +1,98 @@
+REVIEW_CALIBRATION_v0 — EXISTENCE
+
+Purpose
+Calibrate the Existence invariant using borderline phase examples.
+This is proof that Existence judgments are stable enough to encode.
+
+Method
+- Use PHASE_TEMPLATE_v0.txt.
+- For each candidate phase, record independent verdicts:
+  - CTO
+  - Senior Engineer
+  - Security
+- Resolve disagreements by tightening wording in the phase or Existence definition,
+  not by adding new lenses.
+
+Verdict Legend
+PASS = Existence satisfied (single standalone artifact/behavior)
+BLOCK = Existence not satisfied
+
+Borderline Candidate Phases
+
+CASE 1 — “One thing, but feels like groundwork”
+PHASE 1
+EXISTS TO
+Enable future validation by establishing a standard phase format.
+SHIPS AS
+A template file and documentation describing how phases should be written.
+
+Verdicts
+- CTO: ______
+- Sr Eng: ____
+- Security: ____
+Resolution Notes:
+_____________________________________________
+
+CASE 2 — “Manual process with output”
+PHASE 1
+EXISTS TO
+Ensure releases are reviewed consistently before shipping.
+SHIPS AS
+A manual checklist procedure that produces a signed review record.
+
+Verdicts
+- CTO: ______
+- Sr Eng: ____
+- Security: ____
+Resolution Notes:
+_____________________________________________
+
+CASE 3 — “Single artifact but bundled intent”
+PHASE 1
+EXISTS TO
+Provide a legitimacy gate and help users fix failures.
+SHIPS AS
+A CLI tool that returns PASS/BLOCK and suggests how to rewrite the phase.
+
+Verdicts
+- CTO: ______
+- Sr Eng: ____
+- Security: ____
+Resolution Notes:
+_____________________________________________
+
+CASE 4 — “One output, depends on environment”
+PHASE 1
+EXISTS TO
+Make key project info visible in one place.
+SHIPS AS
+A dashboard screen that renders metrics from a backend service.
+
+Verdicts
+- CTO: ______
+- Sr Eng: ____
+- Security: ____
+Resolution Notes:
+_____________________________________________
+
+CASE 5 — “One thing, but ambiguous plurality”
+PHASE 1
+EXISTS TO
+Let users validate a phase definition.
+SHIPS AS
+A CLI command with a config file for rule tuning.
+
+Verdicts
+- CTO: ______
+- Sr Eng: ____
+- Security: ____
+Resolution Notes:
+_____________________________________________
+
+Exit Criteria (calibration complete)
+Calibration is complete when:
+- At least 4/5 cases converge without argument.
+- Any disagreement leads to a wording fix in the phase definition or EXISTENCE_v0.txt.
+- No new lens is introduced to resolve disagreement.
+
+End
