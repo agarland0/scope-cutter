@@ -91,10 +91,12 @@ SHIPS AS
 A CLI command with a config file for rule tuning.
 
 Verdicts
-- CTO: ______
-- Sr Eng: ____
-- Security: ____
+- CTO: BLOCK
+- Sr Eng: BLOCK
+- Security: BLOCK
 Resolution Notes:
+Multiple artifacts (CLI + config). Violates “exactly one standalone artifact/behavior” rule.
+
 _____________________________________________
 
 Exit Criteria (calibration complete)
