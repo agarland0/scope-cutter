@@ -1,0 +1,73 @@
+EXISTENCE_v0 — JUDGMENT CONTRACT
+
+Purpose
+Define the Existence invariant for Scope Cutter v0 in operational terms.
+This document is authoritative for v0 judgments.
+
+Operational Definition (v0)
+A phase PASSES Existence if it ships exactly one concrete artifact or behavior
+that can be used, run, read, or experienced on its own, with no dependence on
+future phases to make it meaningful.
+
+A phase FAILS Existence if it is groundwork, a capability promise, a framework,
+or a bundle of multiple artifacts.
+
+Clarifications (v0)
+- “Concrete” means observable by a user: a file, a command, a screen, a report,
+  a decision record, or a defined manual procedure with a durable output.
+- “Standalone” means: if the project stopped permanently after this phase,
+  the shipped thing would still make sense and be usable as-is.
+- Existence does not require the artifact to be optimal, complete, or scalable.
+
+PASS / BLOCK Examples (v0)
+
+PASS 1
+Phase ships as: A CLI command that accepts one phase definition and returns PASS/BLOCK.
+Reason: One concrete behavior, usable immediately.
+
+PASS 2
+Phase ships as: A script that generates a static report from provided input.
+Reason: Produces a consumable artifact without future dependency.
+
+PASS 3
+Phase ships as: A documented manual workflow that outputs a signed decision record.
+Reason: Behavior produces a durable output.
+
+PASS 4
+Phase ships as: A single UI screen that displays a defined output from local input.
+Reason: One concrete surface, directly usable.
+
+BLOCK 1
+Phase ships as: “Scaffolding / foundation for future rules.”
+Reason: Groundwork; no concrete artifact or behavior.
+
+BLOCK 2
+Phase ships as: “A flexible framework to enable others to add checks later.”
+Reason: Capability promise, not a shippable thing.
+
+BLOCK 3
+Phase ships as: “Phase 1 prepares the system for Phase 2.”
+Reason: Value depends on future phases.
+
+BLOCK 4
+Phase ships as: “A CLI plus a config UI.”
+Reason: Multiple artifacts; hidden scope.
+
+BLOCK 5
+Phase ships as: “Add instrumentation and dashboards for monitoring.”
+Reason: Multiple artifacts and implied future infrastructure; not a single standalone thing.
+
+Accepted Unfairness (v0)
+- v0 prefers false negatives: it may BLOCK legitimate work if it does not resolve
+  into exactly one standalone artifact/behavior.
+- v0 may BLOCK outputs that feel “useful” if their usefulness depends on later
+  phases or bundled work.
+- v0 does not attempt to suggest fixes or alternative scopes.
+
+Edge Case Policy (v0)
+If an example is ambiguous, treat it as BLOCKED unless the phase can be rewritten
+to name one concrete artifact/behavior that stands alone.
+
+End
+This document defines Existence judgments for v0.
+Other lenses (salience, trust boundary, reversibility) are not enforced in v0.
