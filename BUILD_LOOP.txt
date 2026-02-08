@@ -1,0 +1,22 @@
+BUILD LOOP (v0)
+
+Goal
+Implement Existence v0 for ONE phase definition.
+
+Always-true run path (once implemented)
+python src/main.py --phase-file examples/phase_v0.txt
+
+Expected output (golden)
+cat examples/expected_v0.txt
+
+Loop
+1) Edit src/main.py
+2) Run the command above
+3) Compare output to examples/expected_v0.txt
+4) If mismatch: fix code (not specs) unless the spec is genuinely wrong
+
+Rules
+- No new lenses
+- No advice output
+- One-line reason only when BLOCKED
+- Keep changes small; prefer boring explicit code
