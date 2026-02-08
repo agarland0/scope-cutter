@@ -10,7 +10,7 @@ GROUNDWORK_TERMS = [
 ]
 
 MULTI_ARTIFACT_HINTS = [
-    " and ", " plus ", " & ", ",",
+    " and ", " plus ", " & ", " + ",
 ]
 
 IMPLICIT_DEP_TERMS = [
