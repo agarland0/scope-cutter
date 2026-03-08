@@ -1,0 +1,7 @@
+# PASS: This release ships one clear deliverable.
+
+EXISTS TO
+Help users understand what changed in the latest release.
+
+SHIPS AS
+A release notes page on the product website.

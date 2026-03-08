@@ -1,0 +1,7 @@
+# BLOCK: This release attempts to ship multiple deliverables.
+
+EXISTS TO
+Launch the new reporting feature.
+
+SHIPS AS
+A backend API, database schema, web dashboard, and mobile UI.

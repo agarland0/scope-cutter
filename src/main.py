@@ -40,7 +40,7 @@ def blocked(reason: str) -> int:
 
 def main() -> int:
     p = argparse.ArgumentParser()
-    p.add_argument("--phase-file", required=True)
+    p.add_argument("phase_file", help="Path to the phase file (e.g. examples/phase_try.txt)")
     args = p.parse_args()
 
     text = Path(args.phase_file).read_text(encoding="utf-8")
@@ -56,13 +56,13 @@ def main() -> int:
 
     ships_lower = ships_as.lower()
 
-    # Rule 1: obvious multi-artifact phrasing
-    if any(token in ships_lower for token in MULTI_ARTIFACT_HINTS):
-        return blocked("SHIPS AS implies multiple artifacts")
-
-    # Rule 2: groundwork/capability language
+    # Rule 1: groundwork / capability language
     if any(term in ships_lower for term in GROUNDWORK_TERMS):
-        return blocked("SHIPS AS describes groundwork/capability, not a standalone thing")
+        return blocked("release prepares groundwork rather than shipping a deliverable")
+
+    # Rule 2: obvious multi-artifact phrasing
+    if any(token in ships_lower for token in MULTI_ARTIFACT_HINTS):
+        return blocked("release defines multiple deliverables instead of one")
 
     # Rule 3: implicit dependency rule (v0)
     # If it mentions infra-like terms, require an explicit dependency declaration marker.

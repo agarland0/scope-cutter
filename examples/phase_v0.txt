@@ -1,7 +1,0 @@
-PHASE 1
-
-EXISTS TO
-Validate whether a release phase is a standalone thing.
-
-SHIPS AS
-A command that returns PASS or BLOCKED for a single phase definition.

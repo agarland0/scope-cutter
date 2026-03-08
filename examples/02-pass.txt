@@ -1,0 +1,7 @@
+# PASS: This release ships one clear deliverable.
+
+EXISTS TO
+Allow customers to analyze their account activity outside the product.
+
+SHIPS AS
+A downloadable CSV export of account usage.
