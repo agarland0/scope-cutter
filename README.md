@@ -1,8 +1,8 @@
 # Scope Cutter
 
-**Scope Cutter** is a CLI tool that checks whether a proposed product release resolves to **one concrete deliverable**.
+Scope Cutter is a linter for product decisions.
+It checks whether a proposed product release resolves to one concrete deliverable rather than a bundle of outputs.
 
-It acts like a linter for release definitions.
 
 ## The idea
 
