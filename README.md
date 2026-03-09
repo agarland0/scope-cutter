@@ -1,7 +1,3 @@
-Here’s a **much tighter version (about half the length)** that keeps the core idea and removes everything unnecessary.
-
----
-
 # Scope Cutter
 
 **Scope Cutter** is a CLI tool that checks whether a proposed product release phase is defined as a **single standalone deliverable**.
