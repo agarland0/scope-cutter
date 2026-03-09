@@ -10,9 +10,7 @@ Many scope problems start with how a release is defined.
 
 Releases often become overloaded because multiple pieces of work get bundled together into a single goal.
 
-Scope Cutter asks one question: Does this release resolve to one deliverable, or several?
-
-A release should ship **one artifact or behavior** that can stand on its own.
+Scope Cutter (v0) asks one question: Does this release resolve to one deliverable, or several?
 
 
 ## How it works
