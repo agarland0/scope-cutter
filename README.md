@@ -14,10 +14,6 @@ Scope Cutter asks one question: Does this release resolve to one deliverable, or
 
 A release should ship **one artifact or behavior** that can stand on its own.
 
-## Status
-
-v0 validates one constraint: a release must ship one standalone deliverable. Expanded PASS/BLOCK taxonomy, legitimacy checks and semantic validation are deferred to future versions.
-
 
 ## How it works
 
@@ -38,22 +34,6 @@ or
 BLOCKED: (reason)
 
 ---
-
-## Usage
-
-Run with Python:
-
-python3 src/main.py examples/01-pass.txt
-
-Input files must contain:
-
-EXISTS TO  
-(one clear purpose statement)
-
-SHIPS AS  
-(one concrete artifact or behavior)
-
-Exit codes: 0 → PASS, 2 → BLOCKED
 
 ## Examples
 
@@ -83,5 +63,24 @@ Output:
 
 BLOCKED: release defines multiple deliverables instead of one
 
----
 
+## Usage
+
+Run with Python:
+
+python3 src/main.py examples/01-pass.txt
+
+Input files must contain:
+
+EXISTS TO  
+(one clear purpose statement)
+
+SHIPS AS  
+(one concrete artifact or behavior)
+
+Exit codes: 0 → PASS, 2 → BLOCKED
+
+--
+## Status
+
+v0 validates one constraint: a release must ship one standalone deliverable. Expanded PASS/BLOCK taxonomy, legitimacy checks and semantic validation are deferred to future versions.
