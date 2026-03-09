@@ -18,6 +18,43 @@ A release should ship **one artifact or behavior** that can stand on its own.
 
 v0 validates one constraint: a release must ship one standalone deliverable. Expanded PASS/BLOCK taxonomy, legitimacy checks and semantic validation are deferred to future versions.
 
+
+## How it works
+
+A user proposes the kernel of a product release scope, and Scope Cutter evaluates these two fields:
+
+1: EXISTS TO  
+(the purpose of the release)
+
+2: SHIPS AS  
+(the artifact or behavior it delivers)
+
+The tool checks that the release definition resolves to **one standalone deliverable** rather than a bundle of outputs.
+
+Output is either:
+
+PASS
+or
+BLOCKED: (reason)
+
+---
+
+## Usage
+
+Run with Python:
+
+python3 src/main.py examples/01-pass.txt
+
+Input files must contain:
+
+EXISTS TO  
+(one clear purpose statement)
+
+SHIPS AS  
+(one concrete artifact or behavior)
+
+Exit codes: 0 → PASS, 2 → BLOCKED
+
 ## Examples
 
 ### PASS: release ships one clear deliverable.
@@ -47,40 +84,4 @@ Output:
 BLOCKED: release defines multiple deliverables instead of one
 
 ---
-
-## How it works
-
-Scope Cutter evaluates two fields:
-
-EXISTS TO  
-(the purpose of the release)
-
-SHIPS AS  
-(the artifact or behavior it delivers)
-
-The tool checks that the release definition resolves to **one standalone deliverable** rather than a bundle of outputs.
-
-Output is either:
-
-PASS
-or
-BLOCKED: (reason)
-
----
-
-## Usage
-
-Run with Python:
-
-python3 src/main.py examples/01-pass.txt
-
-Input files must contain:
-
-EXISTS TO  
-(one clear purpose statement)
-
-SHIPS AS  
-(one concrete artifact or behavior)
-
-Exit codes: 0 → PASS, 2 → BLOCKED
 
