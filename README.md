@@ -19,10 +19,10 @@ A release should ship **one artifact or behavior** that can stand on its own.
 
 A user proposes the kernel of a product release scope, and Scope Cutter evaluates these two fields:
 
-1: EXISTS TO  
+1 - EXISTS TO  
 (the purpose of the release)
 
-2: SHIPS AS  
+2 - SHIPS AS  
 (the artifact or behavior it delivers)
 
 The tool checks that the release definition resolves to **one standalone deliverable** rather than a bundle of outputs.
