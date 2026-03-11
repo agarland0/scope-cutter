@@ -4,17 +4,9 @@ from pathlib import Path
 
 REQUIRED_HEADERS = ("EXISTS TO", "SHIPS AS")
 
-GROUNDWORK_TERMS = [
-    "scaffold", "scaffolding", "foundation", "framework",
-    "enable future", "prepare", "groundwork", "set up", "setup",
-]
 
 MULTI_ARTIFACT_HINTS = [
     " and ", " plus ", " & ", " + ",
-]
-
-IMPLICIT_DEP_TERMS = [
-    "backend", "service", "api", "database",
 ]
 
 def extract_section(text: str, header: str) -> str:
@@ -56,19 +48,9 @@ def main() -> int:
 
     ships_lower = ships_as.lower()
 
-    # Rule 1: groundwork / capability language
-    if any(term in ships_lower for term in GROUNDWORK_TERMS):
-        return blocked("release prepares groundwork rather than shipping a deliverable")
-
-    # Rule 2: obvious multi-artifact phrasing
+    # # Scope Cutter invariant: release must ship exactly one deliverable
     if any(token in ships_lower for token in MULTI_ARTIFACT_HINTS):
         return blocked("release defines multiple deliverables instead of one")
-
-    # Rule 3: implicit dependency rule (v0)
-    # If it mentions infra-like terms, require an explicit dependency declaration marker.
-    # v0 convention: include "ASSUMES:" in SHIPS AS when relying on external context.
-    if any(term in ships_lower for term in IMPLICIT_DEP_TERMS) and "assumes:" not in ships_lower:
-        return blocked("implicit dependency; declare it explicitly in SHIPS AS using 'ASSUMES:'")
 
     print("PASS")
     return 0
