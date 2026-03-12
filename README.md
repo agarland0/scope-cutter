@@ -1,6 +1,6 @@
 # Scope Cutter
 
-Scope Cutter is a tiny CLI that lints product release definitions.
+Scope Cutter is a small CLI that lints product release definitions.
 
 It enforces one rule: **a release must ship exactly one deliverable.**
 
