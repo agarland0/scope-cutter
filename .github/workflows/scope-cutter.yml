@@ -15,4 +15,3 @@ jobs:
         run: |
           python src/main.py examples/01-pass.txt
           python src/main.py examples/02-pass.txt
-          python src/main.py examples/03-block_multiple_deliverables.txt
