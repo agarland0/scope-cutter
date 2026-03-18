@@ -1,0 +1,17 @@
+name: Scope Cutter Check
+
+on:
+  pull_request:
+
+jobs:
+  scope-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run Scope Cutter on examples
+        run: |
+          python src/main.py examples/01-pass.txt
+          python src/main.py examples/02-pass.txt
