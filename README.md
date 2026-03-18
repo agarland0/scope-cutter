@@ -1,8 +1,8 @@
 # Scope Cutter
 
-Scope Cutter is a small CLI that lints product release definitions.
+Scope Cutter is a CLI that lints product release definitions.
 
-It enforces one rule: **a release must ship exactly one deliverable.**
+It enforces one rule: a release must ship exactly one deliverable.
 
 ## The idea
 
@@ -10,7 +10,7 @@ Many scope problems start with how a release is defined.
 
 Releases often become overloaded because multiple pieces of work get bundled together into a single goal.
 
-Scope Cutter asks one question: **Does this release resolve to one deliverable, or several?**
+Scope Cutter asks one question: Does this release resolve to one deliverable, or several?
 
 ## How it works
 
@@ -81,3 +81,11 @@ Exit codes: 0 → PASS, 2 → BLOCKED
 ## Status
 
 v0 validates one constraint: a release must ship one standalone deliverable
+
+## Workflow Integration
+
+Scope Cutter can run automatically on pull requests.
+
+When a release definition is added or modified, the check runs and blocks the merge if the scope does not resolve to a single deliverable.
+
+This enforces scope constraints at commit time rather than relying on manual review.
